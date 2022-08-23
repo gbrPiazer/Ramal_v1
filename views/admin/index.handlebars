@@ -1,0 +1,52 @@
+
+<nav class="navbar justify-content-center bg-light ">
+    <a class="add-setor-btn btn btn-sm btn-outline-secondary" href="/admin/add-ramal">Adicionar Ramal</a>
+    <a class="add-setor-btn btn btn-sm btn-outline-secondary mx-2" href="/admin/setores">Gerenciar setores</a>
+</nav>
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+<div class="card">
+    <div class="card-body">  
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Setor</th>
+                    <th scope="col">Funcionário</th>
+                    <th vlass="col">Ramal</th>
+                    <th vlass="col">E-mail</th>
+                    <th scope="col">Delete</th>
+                    <th vlass="col-auto">Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each ramais}}
+                <tr>
+                    <td scope="row">{{setor.nome}}</td>
+                    <td scope="row">{{nome_func}}</td>
+                    <td scope="row">{{ramal}}</td>
+                    <td scope="row">{{email}}</td>
+                    <td>
+                        <form action="/admin/ramal/deletar" method="post">
+                        <input type="hidden" name="id" value="{{_id}}">
+                        <button class="btn btn-outline-danger"><span class="material-symbols-outlined">delete</span></button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="/admin/ramal/edit/{{_id}}">
+                        <button class="btn btn-outline-warning"><span class="material-symbols-outlined">edit</span></button>
+                        </a>
+                    </td>
+                {{else}}
+                    
+                {{/each}}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+

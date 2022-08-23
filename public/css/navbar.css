@@ -1,0 +1,23 @@
+div#header{
+    width: 100vw;
+    padding: 1em .5em 1em .5em;
+    display: grid;
+    justify-items: center;
+}
+div#header img{
+    padding-bottom: 1em;
+}
+div#header form#search-bar{
+    display: flex;
+}
+div#header form#search-bar input{
+    padding: 5px;
+}
+div#header form#search-bar button{
+    padding: 5px;
+    width: 3rem;
+    cursor: pointer;
+}
+div#header form#search-bar input[type=search]{
+    outline: 0;
+}
