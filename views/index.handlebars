@@ -9,22 +9,9 @@
 
 <nav class="navbar justify-content-center">
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary me-md-2" type="button">Filas</button>
+        <button class="btn btn-primary me-md-2" type="button" onclick="cliQue()">Filas</button>
         <button class="btn btn-primary" type="button"> Salas</button>
-        <div class="dropdown">
-            <button type="button" data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle">
-                Setores
-            </button>
-            <form action="" method="post">
-                <ul class="dropdown-menu">
-                    {{#each setores}}
-                    <li><a class="dropdown-item" href="{{_id}}">{{nome}}</a></li>
-                    {{else}}
-                    <li>Sem setores para listar</li>
-                    {{/each}}
-                </ul>
-            </form>
-        </div>
+        
 </nav>
 {{#each erros}}
     <div class="alert alert-danger">{{texto}}</div>

@@ -1,6 +1,5 @@
 const searchResults = document.getElementById('searchResults')
 
-
 function sendData(e){
   let match = e.value.match(/^[a-zA-Z]*/)
   let match2 = e.value.match(/\s*/)
@@ -13,6 +12,7 @@ function sendData(e){
     body: JSON.stringify({payload: e.value})
   }).then(res => res.json()).then(data => {
     let payload = data.payload;
+    console.log(payload)
     searchResults.innerHTML = '';
     if(payload.length < 1){
       searchResults.innerHTML = '<tr> <td></td> <td> Nenhum funcionário encontrado </td><td></td><td></td> </tr>';
@@ -28,4 +28,8 @@ function sendData(e){
       `
     })
   })
+}
+
+function cliQue(){
+  searchResults.innerHTML = '{{>_lista_ramal}}';
 }

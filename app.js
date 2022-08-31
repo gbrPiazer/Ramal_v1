@@ -50,8 +50,8 @@
         app.use(express.static(path.join(__dirname, "public")))
 
 //Rotas
-        app.get('/', (req, res) => {
-            Ramal.find().populate("setor").then((ramais) => {
+        app.get('/', async (req, res) => {            
+            Ramal.find({}).sort({setor: 'asc', nome_func: 'asc'}).populate("setor").then((ramais) => {
                 Setores.find().then((setores) => {
                     res.render("index", {ramais: ramais, setores: setores})
                     })
@@ -61,14 +61,10 @@
                 res.render("index")
             })
         })
-        app.post("/:id", async (req,res) => {
-            Setores.findOne({_id: req.params.id}).then((setores) => {
-                res.sendFile("")
-            })
-        })
+
         app.post("/extrairFunc", async (req, res) => {
             let payload = req.body.payload.trim();
-            let search = await Ramal.find({nome: {$regex: new RegExp('^'+payload+'.*', 'i')}}).populate("setor").exec();
+            let search = await Ramal.find({nome_func: {$regex: new RegExp('^'+payload+'.*', 'i')}}).populate("setor").exec();
             res.send({payload: search});
         })
         app.use('/admin', admin)

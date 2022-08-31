@@ -8,7 +8,7 @@ const Ramal = mongoose.model("ramais")
 
     //Rota página inicial ADM
         router.get('/', (req, res) => {
-            Ramal.find().populate("setor").then((ramais) => {
+            Ramal.find().sort({setor: 'asc', nome_func: 'asc'}).populate("setor").then((ramais) => {
                 res.render("admin/index", {ramais: ramais})
             }).catch((err) => {
                 console.log(err)
