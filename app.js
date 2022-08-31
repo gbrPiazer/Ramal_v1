@@ -51,7 +51,7 @@
 
 //Rotas
         app.get('/', async (req, res) => {            
-            Ramal.find({}).sort({setor: 'asc', nome_func: 'asc'}).populate("setor").then((ramais) => {
+            Ramal.find({}).sort({setor: 'desc', nome_func: 'asc'}).populate("setor").then((ramais) => {
                 Setores.find().then((setores) => {
                     res.render("index", {ramais: ramais, setores: setores})
                     })
@@ -60,12 +60,6 @@
                 req.flash("error_msg", "Houve um erro ao carregar o formulário")
                 res.render("index")
             })
-        })
-
-        app.post("/extrairFunc", async (req, res) => {
-            let payload = req.body.payload.trim();
-            let search = await Ramal.find({nome_func: {$regex: new RegExp('^'+payload+'.*', 'i')}}).populate("setor").exec();
-            res.send({payload: search});
         })
         app.use('/admin', admin)
 //Outros
