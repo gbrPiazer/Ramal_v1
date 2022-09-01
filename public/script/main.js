@@ -7,6 +7,3 @@ $(document).ready(function(){
   })
 })
 
-$('#f1').on('click', function(){
-  $('#searchResults').html('>_lista_filas');
-})
