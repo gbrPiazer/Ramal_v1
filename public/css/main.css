@@ -7,7 +7,6 @@
 }
 
 body{
-
   background-color: var(--bs-white);
 }
 /*icon*/
@@ -17,4 +16,40 @@ font-variation-settings:
 'wght' 400,
 'GRAD' 0,
 'opsz' 48
+}
+aside.container-aside{
+  z-index: 999;
+  position: absolute;
+}
+aside.container-aside div.salas, div.filas{
+  margin: 10px;
+  height: 100%;
+  display: flex;
+}
+aside.container-aside div.container-salas{
+  display: none;
+}
+aside.container-aside div.container-filas{
+  display: none;
+}
+aside.container-aside button{
+  max-height: 200px;
+}
+aside.container-aside h3{
+  font-size: 20px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+}
+aside.container-aside div.header-filas, div.header-salas{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+div.header-salas{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
 }

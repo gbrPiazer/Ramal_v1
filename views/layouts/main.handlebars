@@ -23,7 +23,166 @@
 </head>
 <body class="bg-light">
     {{>_navbar}}
-    
+
+      <aside class="container-aside">      
+          <div class="filas">
+              <div class="container-filas card">
+                  <div class="header-filas">
+                    <h4>FILAS</h4>
+                    <button id="fechar_filas" class="btn btn-danger btn-sm"><span class="material-symbols-outlined"> close</span></button>
+                  </div>
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th scope="col">Fila</th>
+                              <th scope="col">Ramal</th>
+                              <th scope="col">Email</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td scope="row">Ativações</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:5001">5001</a></td>
+                              <td>Não encontrado</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">CGR</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:5002">5002</a></td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="mailto:cgr@sebratel.com.br">cgr@sebratel.com.br</a></td>
+                          </tr>
+                          <tr>
+                                <td scope="row">Comercial Backoffice</td>
+                                <td scope="row"><a class="btn btn-outline-danger" href="tel:4004">4004</a></td>
+                                <td scope="row"><a class="btn btn-outline-danger" href="mailto:backoffice@sebratel.com.br">backoffice@sebratel.com.br</a></td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Comercial Corporativo</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:4006">4006</a></td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="mailto:corporativo@sebratel.com.br">corporativo@sebratel.com.br</a></td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Comercial Vendas</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:4003">4003</a></td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="mailto:vendas@sebratel.com.br">vendas@sebratel.com.br</a></td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Financeiro Cancelamento</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:4001">4001</a></td>
+                              <td>Não encontrado</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Operacional Agendamentos</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:5003">5003</a></td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="mailto:operacional@sebratel.com.br">operacional@sebratel.com.br</a></td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Infraestrutura</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:5004">5004</a></td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="mailto:infra@sebratel.com.br">infra@sebratel.com.br</a></td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Comercial Relacionamento</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:4005">4005</a>
+                              <td>Não encontrado</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Financeiro</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:4002">4002</a></td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="mailto:financeiro@sebratel.com.br">financeiro@sebratel.com.br</a></td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Ouvidoria</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:9001">9001</a></td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="mailto:ouvidoria@sebratel.com.br">ouvidoria@sebratel.com.br</a></td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Suporte</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:9000">9000</a></td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="mailto:suporte@sebratel.com.br">suporte@sebratel.com.br</a></td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Telefonista 1</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:9003">9003</a></td>
+                              <td>Não encontrado</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Telefonista 2</td>
+                              <td scope="row"><a class="btn btn-outline-danger" href="tel:9002">9002</a></td>
+                              <td>Não encontrado</td>
+                          </tr>
+                      </tbody>
+                  </table>            
+              </div>  
+              <button id="filas" class="btn btn-danger btn-sm"><h3>Filas</h3></button>      
+          </div>
+
+          <div class="salas">              
+              <div class="container-salas card">
+                  <div class="header-salas">
+                    <h4>SALAS</h4>
+                    <button id="fechar_salas" class="btn btn-danger btn-sm"><span class="material-symbols-outlined"> close</span></button>
+                  </div>
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th scope="col">Setor</th>
+                              <th scope="col">Local</th>
+                              <th vlass="col">Ramal</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td scope="row">Sala</td>
+                              <td scope="row">Laboratório</td>
+                              <td scope="row">250</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Sala</td>
+                              <td scope="row">Reuniões I</td>
+                              <td scope="row">245</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Sala</td>
+                              <td scope="row">Reuniões II</td>
+                              <td scope="row">247</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Sala</td>
+                              <td scope="row">Sala dos técnicos</td>
+                              <td scope="row">250</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Sala</td>
+                              <td scope="row">Almoxarifado</td>
+                              <td scope="row">250</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Loja</td>
+                              <td scope="row">Triunfo</td>
+                              <td scope="row">250</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Loja</td>
+                              <td scope="row">Nova Santa Rita</td>
+                              <td scope="row">250</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Loja</td>
+                              <td scope="row">Nova Santa Rita</td>
+                              <td scope="row">250</td>
+                          </tr>
+                          <tr>
+                              <td scope="row">Loja</td>
+                              <td scope="row">Nova Santa Rita</td>
+                              <td scope="row">250</td>
+                          </tr>
+                      </tbody>
+                  </table>            
+              </div>  
+              <button id="salas" class="btn btn-danger btn-sm"><h3>Salas</h3></button>      
+          </div>        
+      </aside>
+
       <div class="container">
         {{>_msg}}
         {{{body}}}
